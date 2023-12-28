@@ -4,36 +4,28 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
-# project_name = 'mlops'
+package_name = "mongodb_connect"
 
 list_of_files = [
-    f".github/workflows/.gitkeep",
-    f"src/__init__.py",
-    f"src/component/__init__.py",
-    f"src/component/data_ingestion.py",
-    f"src/component/data_transformation.py",
-    f"src/component/model_trainer.py",
-    f"src/component/model_evaluation.py",
-    f"src/pipeline/__init__.py",
-    f"src/pipeline/training_pipeline.py",
-    f"src/pipeline/prediction_pipeline.py",
-    f"src/utils/__init__.py", 
-    f"src/utils/utils.py",
-    "src/logger/__init__.py",
-    "src/logger/logging.py",
-    "src/exception/__init__.py",
-    "src/exception/exception.py",
-    'tests/unit/__init__.py',
-    'tests/integration/__init__.py',
-    "init_setup.sh",
-    "requirements.txt",
-    "requirements_dev.txt",
-    "setup.py",
-    "setup.cfg",
-    "pyproject.toml",
-    "tox.ini",
-    'experiment/experiment.ipynb'
+   ".github/workflows/ci.yaml",
+   "src/__init__.py",
+   f"src/{package_name}/__init__.py", 
+   f"src/{package_name}/mongo_crud.py", 
+   "tests/__init__.py",
+   "tests/unit/__init__.py",
+   "tests/unit/unit.py",
+   "tests/integration/__init__.py",
+   "tests/integration/int.py",
+   "init_setup.sh",
+   "requirements.txt", 
+   "requirements_dev.txt",
+   "setup.py",
+   "setup.cfg",
+   "pyproject.toml",
+   "tox.ini",
+   "experiments/experiments.ipynb", 
 ]
+
 
 
 for filepath in list_of_files:
